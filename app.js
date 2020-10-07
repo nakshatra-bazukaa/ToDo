@@ -11,6 +11,7 @@ const generateTemplate = todo => {
     list.innerHTML += html;
 };
 
+// Adding todo
 addForm.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -21,3 +22,11 @@ addForm.addEventListener('submit', e => {
         addForm.reset();
     }
 });
+
+// Delete todos
+list.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
+});
+
